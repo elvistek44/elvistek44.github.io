@@ -1,0 +1,60 @@
+
+.menu {
+    display: flex;
+    gap: 20px;
+  }
+
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .menu a:hover {
+    color: #fff700;
+  }
+
+  #menu-bar {
+    display: none;
+  }
+
+  .icon-menu {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column; 
+      align-items: flex-start;
+    }
+
+    .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    #menu-bar:checked + .icon-menu + .menu {
+      display: flex;
+    }
+
+    .icon-menu {
+      display: block;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+    }
+    .menu a {
+      font-size: 18px; 
+      padding: 10px;
+      text-align: center;
+      width: 100%;
+      
+      border-top: 1px solid #444;
+    }
+}

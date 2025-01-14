@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title> Rincón Picante</title>
+        <meta charser="UTF-8">
+        <meta name="viewport" content="width=device—
+        width, user—scalable=no, initial—scale=1, maximum—
+        scale=1, minimum—scale=1">
+        <link rel="stylesheet" href="css/fontello.css">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="script.js">
+    </head>
+    <body>
+        <!--Vincular el archivo externo de Javascript-->
+        <script src="script.js"></script>
+        
+     
+     <style>
+
+            header {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              background-color: rgb(179, 12, 12 );
+              padding: 10px 20px;
+            }
+            header img {
+              width: 27px;
+              height: auto;
+              margin-right: 10px;
+            }
+            h1 {
+              color: white;
+              font-size: 24px;
+              display: flex;
+              align-items: center;
+            }
+            .menu {
+              display: flex;
+              gap: 20px;
+            }     
+            .menu a {
+              color: white;
+              text-decoration: none;
+              font-size: 16px;
+            }     
+            .menu a:hover {
+              color: rgb(255, 217, 0);
+            }       
+            #menu-bar {
+              display: none;
+            }  
+            .icon-menu {
+              display: none;
+            }    
+            @media (max-width: 768px) {
+              header {
+                flex-direction: column; 
+                align-items: flex-start; 
+              }
+              .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #333;
+                width: 100%;
+                padding: 10px 0;
+              }     
+              #menu-bar:checked + .icon-menu + .menu {
+                display: flex;
+              }       
+              .icon-menu {
+                display: block;
+                color: white;
+                font-size: 30px;
+                cursor: pointer;
+              }      
+              .menu a {
+                font-size: 18px; 
+                padding: 10px;
+                text-align: center;
+                width: 100%;
+                border-top: 1px solid #444;
+              }       
+              header img {
+                width: 35px; 
+                margin-right: 0; 
+              }
+            }
+          </style>
+        </head>
+        <body>       
+        <header>
+          <div class="contenedor"> 
+        <align= right> <img src="img/logorojo.png.jpeg" alt="Logo"></align= right>
+            <h1 class="icon-fire">🔥🍉 Rincón Picante</h1> 
+            <input type="checkbox" id="menu-bar">
+            <label class="icon-menu" for="menu-bar">&#9776;</label> 
+            <nav class="menu">
+              <a href="#bienvenidos" class="menu-item">Inicio</a>
+              <a href="#mision" class="menu-item">Misión</a>
+              <a href="#vision" class="menu-item">Visión</a>
+              <a href="#valores" class="menu-item">Valores</a>
+              <a href="carrito.html" class="menu-item">Carrito</a>
+              <a href="#footer" class="menu-item">Contactos</a>
+              <a href="ingles.html" class="menu-item">Ingles</a>
+            </nav>
+          </div>
+        </header>      
+        <script>
+          const menuItems = document.querySelectorAll('.menu-item');
+          menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+              document.getElementById('menu-bar').checked = false;
+            });
+          });
+        </script>
+        <main>
+            <section id="banner">
+                <img src="img/sandia.jpg" >
+                <div class="contenedor">
+                <h2>Chamoy De Sandia</h2>
+                <p>Dale un toque unico a tu antojo</p>
+                <a href="https://www.directoalpaladar.com.mx/ingredientes-y-alimentos/chamoy-que-esta-hecho-donde-se-origino-esta-deliciosa-salsa-agridulce">Leer más</a>
+            </div>
+            </section>
+            <section id="bienvenidos">
+                <h2>¡Bienvenidos a Rincón Picante! </h2>
+                <h6> ‎ ‎ ‎ </h6>
+                <h3>En Rincón Picante, nos enorgullece ofrecer una experiencia culinaria única, fusionando lo mejor de la gastronomía mexicana. Cada platillo es una mezcla de tradiciones y creatividad, donde ingredientes frescos y de calidad se combinan para crear sabores excepcionales. Nuestro compromiso es brindarte una experiencia memorable, celebrando lo mejor de ambas culturas en cada bocado. ¡Ven y disfruta de esta deliciosa fusión en un solo lugar!
+
+                </h3>
+            </section>
+            <section id="intro">
+            <chamoy></chamoy>
+                <marquee direction="right"scrolldelay="200"><h2> 🍉Disftuta este delicioso chamoy con lo que quieras🍉 </h2></marquee>
+            </section>
+            <section id="blog">
+            <center><h2>Nuestro Producto!!!</h2></center>
+                <h4>Un frasco puede costar de 25$ a 75$ dependiendo del tamaño</h4>
+                <div class="contenedor">    
+                    <article>
+                    <center><img src="img/chamoyhd.png.png"></center>
+                        <h4>Este es un frasco con nuestro producto</h4>
+                        <article>
+                        <center><img src="img/vasohd.png.png"> </center>
+                        <h4>Listo para degustarse con lo que quieras🍉</h4>
+                    </article>
+                    <article>
+                    <center><img src="img/mango.png" > </center>
+                        <h4>Esta es una de las muchas formas con las que se puede acompañar!</h4>
+                    </article>
+                    <h5>¿Cómo puedes adquirir nuestros productos?
+                        Opciones de compra
+                        A través de la página web directo de los contactos de nosotros 
+                    
+                        <center><li>  +52 644 154 9886</li>
+                        <center><li> +52 644 232 4464</li></center>
+                            <center> <li>  +52 644 129 1376</li></center>
+                                <center><li>+52 644 233 0235</li></center>
+                                    <center>  <li> +52 644 191 5803</li></center>
+                
+                        </h5>
+                    <center> <h6>Sugerencias de mejora y Devoluciones a los números anteriores</h6> </center>
+
+                </div>
+            </section>
+            
+            <section id="info">
+                <h3>Rincón Picante! Fusionamos los sabores de Corea y México para ofrecerte una experiencia única de calidad y sabor. ¡Ven y disfruta de nuestra propuesta innovadora!
+                </h3>
+                <div class="contenedor">
+                    <div class="info-pet">
+                        <marquee direction="right"scrolldelay="200"><img src="img/logorojo.png.jpeg"></img></marquee>
+                    <h6> ‎ ‎ ‎ </h6>
+                    
+                    </pet>
+                    <pet>
+                        <section id="mision">
+                        <img src="img/mision.png">
+                        <h2>Misión</h2>
+                        <h6> ‎ ‎ ‎ </h6>
+                        <h4>Nuestra misión es satisfacer el paladar de los clientes con la fusión de sabores únicos y deliciosos mientras promovemos la innovación ya que unimos nuestra cultura con la  coreana, proporcionando productos elaborados con altos estándares de calidad y un servicio que nos distingue.
+                        </h4>
+                    </section>
+                    </pet>
+                    <pet>
+                        <section id="vision">
+                        <img src="img/vision.png" >
+                    <h2>Visión</h2>
+                    <h6> ‎ ‎ ‎ </h6>
+                        <h4>Como nuestra visión queremos ser reconocidos como la mejor opción de comida coreana en el sur de Sonora, por nuestra innovación constante calidad y compromiso con la excelencia.     
+                        </h4>
+                    </section>
+                    </pet>
+                    <pet>
+                        <section id="valores">
+                        <img src="img/valores.png" >
+                        <h2>Valores</h2>
+                        <h6> ‎ ‎ ‎ </h6>
+                        <h4>En Rincón Picante, nos enfocamos en innovación para mejorar siempre, calidad usando los mejores ingredientes, excelencia nofreciendo un servicio único, autenticidad al fusionar sabores coreanos y mexicanos, y una fuerte comunidad, haciendo que nuestros clientes se sientan como en casa.</h4>
+                    </section>
+                    </pet>
+                </div>
+                </div>              
+            </section>
+            <section id="informacion"> 
+                <h3>El chamoy de sandía es una combinación deliciosa para quienes disfrutan de los sabores ácidos, dulces y salados. El chamoy, en su forma tradicional, es una mezcla de frutas, chile, sal y azúcar que le da un toque muy característico. Cuando se le agrega el sabor de la sandía, se obtiene un toque refrescante y afrutado, que puede ser muy atractivo en el calor o como complemento para snacks como frutas, papas fritas, o incluso bebidas.
+
+                    Algunas personas adoran este tipo de chamoy por la frescura de la sandía, mientras que otras pueden encontrar que no es tan sabroso si prefieren el sabor más clásico del chamoy. Si eres fan de los sabores intensos y la combinación de dulce, ácido y picante, ¡probablemente lo disfrutarás!
+                    
+                    Si tienes la oportunidad de probarlo, ¡te animo a hacerlo y ver si se adapta a tus gustos!</h3>    
+            </section>
+        </main>
+        <section id="footer">
+        <footer>
+            <div class="contenedor">
+                <p class="copy">RincónPicante &copy;2024 </p>
+                <div class="sociales">
+                    <p>Contactos:</p>
+                <rigth><li> Alvaro - 644 154 9886</li> </rigth>
+            <center> <li>  Ana - 6442330235</li> </center>
+        <center> <li>  Luis - 644 129 1376</li> </center>
+        <center> <li>  Raúl - 644 232 4464</li> </center>
+    <center> <li>  Itati - 644 191 5803</li> </center>
+                    
+                <a class="icon-instagram" href="https://www.instagram.com/rinc.onpicante?igsh=MW5weHplem0xdmp2OQ==">
+                        
+                    </a>
+               
+                </div>
+            </div>
+        <section id="marquee">
+            <left> <marquee><h2> 🔥🍉Rincon picante🍉🔥 </h2></marquee></left>
+        </section>
+        </section>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Spicy Corner</title>
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/info.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="ingles.js"></script>
+    <style>
+
+      
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(179, 12, 12);
+            padding: 10px 20px;
+        }
+
+        header img {
+            width: 27px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .menu a:hover {
+            color: rgb(255, 217, 0);
+        }
+
+        #menu-bar {
+            display: none;
+        }
+
+        .icon-menu {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #333;
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            #menu-bar:checked + .icon-menu + .menu {
+                display: flex;
+            }
+
+            .icon-menu {
+                display: block;
+                color: white;
+                font-size: 30px;
+                cursor: pointer;
+            }
+
+            .menu a {
+                font-size: 18px;
+                padding: 10px;
+                text-align: center;
+                width: 100%;
+                border-top: 1px solid #444;
+            }
+
+            header img {
+                width: 35px;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <img src="img/logorojo.png.jpeg" alt="Logo">
+        <h1 class="icon-fire">🔥🍉 Spicy Corner</h1>
+        <input type="checkbox" id="menu-bar">
+        <label class="icon-menu" for="menu-bar">&#9776;</label>
+        <nav class="menu">
+            <a href="#bienvenidos" class="menu-item">Home</a>
+            <a href="#mision" class="menu-item">Mission</a>
+            <a href="#vision" class="menu-item">Vision</a>
+            <a href="#valores" class="menu-item">Values</a>
+            <a href="carrito.html" class="menu-item">Cart</a>
+            <a href="#footer" class="menu-item">Contact</a>
+            <a href="index.html" class="menu-item">Spanish</a>
+        </nav>
+    </div>
+</header>
+
+<script>
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            document.getElementById('menu-bar').checked = false;
+        });
+    });
+</script>
+
+<main>
+    <section id="banner">
+        <img src="img/sandia.jpg" alt="Watermelon Chamoy">
+        <div class="contenedor">
+            <h2>Watermelon Chamoy</h2>
+            <p>Add a unique twist to your snack</p>
+            <a href="https://www.directoalpaladar.com.mx/ingredientes-y-alimentos/chamoy-que-esta-hecho-donde-se-origino-esta-deliciosa-salsa-agridulce">Read more</a>
+        </div>
+    </section>
+
+    <section id="bienvenidos">
+        <h2>Welcome to Spicy Corner!</h2>
+        <h6> ‎ ‎ ‎ </h6>
+        <h3>At Spicy Corner, we take pride in offering a unique culinary experience, combining the best of Mexican cuisine. Each dish is a mix of tradition and creativity, where fresh and high-quality ingredients come together to create exceptional flavors. Our commitment is to provide you with a memorable experience, celebrating the best of both cultures in every bite. Come and enjoy this delicious fusion in one place!</h3>
+    </section>
+
+    <section id="intro">
+        <marquee direction="right" scrolldelay="200">
+            <h2>🍉 Enjoy this delicious chamoy with whatever you want 🍉</h2>
+        </marquee>
+    </section>
+
+    <section id="blog">
+        <center>
+            <h2>Our Product!!!</h2>
+        </center>
+        <h4>A jar can cost between $25 to $75 depending on the size</h4>
+        <div class="contenedor">
+            <article>
+                <center><img src="img/chamoyhd.png.png" alt="Chamoy Jar"></center>
+                <h4>This is a jar with our product</h4>
+            </article>
+
+            <article>
+                <center><img src="img/vasohd.png.png" alt="Jar Ready to Serve"></center>
+                <h4>Ready to enjoy with whatever you want🍉</h4>
+            </article>
+
+            <article>
+                <center><img src="img/mango.png" alt="Mango with Chamoy"></center>
+                <h4>This is one of the many ways you can enjoy it!</h4>
+            </article>
+
+            <h5>How can you acquire our products?
+                Purchase options: Through our website or directly through our contacts:
+                <ul>
+                    <li>+52 644 154 9886</li>
+                    <li>+52 644 232 4464</li>
+                    <li>+52 644 129 1376</li>
+                    <li>+52 644 233 0235</li>
+                    <li>+52 644 191 5803</li>
+                </ul>
+            </h5>
+
+            <center>
+                <h6>Suggestions for improvements and returns can be made to the above numbers</h6>
+            </center>
+        </div>
+    </section>
+
+    <section id="info">
+        <h3>Spicy Corner! We combine the flavors of Korea and Mexico to offer you a unique experience of quality and flavor. Come and enjoy our innovative proposal!</h3>
+        <div class="contenedor">
+            <section id="mision">
+                <div class="info-pet">
+                    <marquee direction="right"scrolldelay="200"><img src="img/logorojo.png.jpeg"></img></marquee>
+                <h6> ‎ ‎ ‎ </h6>
+                
+                </pet>
+                <pet>
+                <img src="img/mision.png" alt="Mission">
+                <h2>Mission</h2>
+                <h6> ‎ ‎ ‎ </h6>
+                <h4>Our mission is to satisfy the customers' palates with unique and delicious flavors while promoting innovation by combining our culture with the Korean one, providing products made with high-quality standards and exceptional service that distinguishes us.</h4>
+            </section>
+                </pet>
+                </pet>
+            <section id="vision">
+                <img src="img/vision.png" alt="Vision">
+                <h2>Vision</h2>
+                <h6> ‎ ‎ ‎ </h6>
+                <h4>Our vision is to be recognized as the best option for Korean food in the south of Sonora, due to our constant innovation, quality, and commitment to excellence.</h4>
+            </section>
+        
+            <section id="valores">
+                <img src="img/valores.png" alt="Values">
+                <h2>Values</h2>
+                <h6> ‎ ‎ ‎ </h6>
+                <h4>At Spicy Corner, we focus on innovation to always improve, quality using the best ingredients, excellence by offering unique service, authenticity by merging Korean and Mexican flavors, and a strong community, making our customers feel at home.</h4>
+            </section>
+        </div>
+    </section>
+
+    <section id="info">
+        <h3>Watermelon Chamoy is a delicious combination for those who enjoy sour, sweet, and salty flavors. Traditional chamoy is a mix of fruits, chili, salt, and sugar, giving it a distinctive flavor. When combined with watermelon, it adds a refreshing, fruity twist, perfect for hot weather or as a complement to snacks like fruits, chips, or even drinks.
+
+            Some people love this watermelon chamoy for its freshness, while others may not find it as flavorful if they prefer the classic chamoy taste. If you're a fan of intense flavors and the combination of sweet, sour, and spicy, you'll probably enjoy it!
+
+            If you get the chance to try it, I encourage you to do so and see if it suits your taste!</h3>
+    </section>
+</main>
+
+<section id="footer">
+    <footer>
+        <div class="contenedor">
+            <p class="copy">Spicy Corner &copy;2024</p>
+            <div class="sociales">
+                <p>Contacts:</p>
+                <ul>
+                    <li>Alvaro - 644 154 9886</li>
+                    <li>Ana - 644 233 0235</li>
+                    <li>Luis - 644 129 1376</li>
+                    <li>Raúl - 644 232 4464</li>
+                    <li>Itati - 644 191 5803</li>
+                </ul>
+                <a class="icon-instagram" href="https://www.instagram.com/rinc.onpicante?igsh=MW5weHplem0xdmp2OQ==">
+                </a>
+            </div>
+        </div>
+    </footer>
+</section>
+
+<section id="marquee">
+    <marquee><h2> 🔥🍉Spicy Corner🍉🔥 </h2></marquee>
+</section>
+
+</body>
+</html>

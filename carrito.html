@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="carrito.css">
+</head>
+<style>
+    header {
+      display: flex;
+      align-items: center; 
+      justify-content: flex-start;
+      padding: 10px 20px;
+      background-color: rgb(179, 12, 12);
+      color: white; 
+    }
+    header img {
+      width: 80px; 
+      height: auto;
+      margin-right: 15px; 
+    }
+    header h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+</style>
+<body>
+
+<div class="language-selector">
+  <button onclick="changeLanguage('es')">Español</button>
+  <button onclick="changeLanguage('en')">English</button>
+</div>
+
+<header>
+<img src="img/logorojo.png.jpeg" alt="Logo">
+  <h1 id="title">Rincón Picante🍉🔥</h1>
+</header>
+<button onclick="window.location.href='index.html';" class="back-to-home-btn">Pagina Principal</button>
+
+<body>
+  <div class="container">
+    <h1 id="cart-title">Carrito de Compras</h1> 
+
+    <div class="product-list">
+      <div class="product" data-id="1">
+        <img src="img/chamoyhd.png.png" alt="Producto 1">
+        <h3 id="product1-name">Producto 1</h3>
+        <p>$25.00</p>
+        <button class="add-to-cart" id="product1-btn">Añadir al carrito</button> 
+      </div>
+
+      <div class="product" data-id="2">
+        <img src="img/chamoyhd.png.png" alt="Producto 2">
+        <h3 id="product2-name">Producto 2</h3> 
+        <p>$50.00</p>
+        <button class="add-to-cart" id="product2-btn">Añadir al carrito</button>
+      </div>
+
+      <div class="product" data-id="3">
+        <img src="img/chamoyhd.png.png" alt="Producto 3">
+        <h3 id="product3-name">Producto 3</h3>
+        <p>$70.00</p>
+        <button class="add-to-cart" id="product3-btn">Añadir al carrito</button>
+      </div>
+    </div>
+
+    <div class="cart">
+      <h2 id="cart-heading">Carrito</h2>
+      <ul id="cart-items">
+    
+      </ul>
+      <p>Total: $<span id="total-price">0.00</span></p>
+      <button id="checkout-btn">Realizar compra</button> 
+    </div>
+  </div>
+
+  <script>
+    function changeLanguage(language) {
+      if (language === 'es') {
+        document.getElementById('title').textContent = 'Rincón Picante 🍉🔥';
+        document.getElementById('cart-title').textContent = 'Carrito de Compras';
+        document.getElementById('product1-name').textContent = 'Producto 1';
+        document.getElementById('product2-name').textContent = 'Producto 2';
+        document.getElementById('product3-name').textContent = 'Producto 3';
+        document.getElementById('product1-btn').textContent = 'Añadir al carrito';
+        document.getElementById('product2-btn').textContent = 'Añadir al carrito';
+        document.getElementById('product3-btn').textContent = 'Añadir al carrito';
+        document.getElementById('cart-heading').textContent = 'Carrito';
+        document.getElementById('checkout-btn').textContent = 'Realizar compra';
+      } else if (language === 'en') {
+        document.getElementById('title').textContent = 'Spicy Corner 🍉🔥';
+        document.getElementById('cart-title').textContent = 'Shopping Cart';
+        document.getElementById('product1-name').textContent = 'Product 1';
+        document.getElementById('product2-name').textContent = 'Product 2';
+        document.getElementById('product3-name').textContent = 'Product 3';
+        document.getElementById('product1-btn').textContent = 'Add to Cart';
+        document.getElementById('product2-btn').textContent = 'Add to Cart';
+        document.getElementById('product3-btn').textContent = 'Add to Cart';
+        document.getElementById('cart-heading').textContent = 'Cart';
+        document.getElementById('checkout-btn').textContent = 'Checkout';
+      }
+    }
+  </script>
+
+
+  <script src="carrito.js"></script>
+</body>
+</html>
